@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "handman 2", "handman 2\handman 2.csproj", "{ACD3E85C-3142-4EE9-99BD-14CB2173F58D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ACD3E85C-3142-4EE9-99BD-14CB2173F58D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACD3E85C-3142-4EE9-99BD-14CB2173F58D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACD3E85C-3142-4EE9-99BD-14CB2173F58D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACD3E85C-3142-4EE9-99BD-14CB2173F58D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58BFC97E-3EAC-412B-BDD0-48E4CC556FE4}
+	EndGlobalSection
+EndGlobal
