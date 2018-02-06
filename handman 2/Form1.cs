@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,60 +15,109 @@ namespace handman_2
     {
         public Hangman()
         {
-            values val = new values();
             InitializeComponent();
-        }
-
-        private void Validate_Click(object sender, EventArgs e)
-        {
-            values val = new values();
-            Whatword wd = new Whatword();
-            do
-            {
-                val.GetInput = UserInput.Text.ToLower();
-                UserInput.Clear();
-                if (val.GetCurrentWord[val.GetLetter].Equals(val.GetInput) && val.GetInput.Length > 0)
-                {
-                }
-                else
-                {
-                    val.GetMatcher++;
-                }
-                    val.GetLetter++;
-            } while (Debug_Label.Text.Length  > val.GetLetter);
-            val.GetLetter = 0;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            values val = new values();
-            Whatword wd = new Whatword();
-            Random rnd = new Random();
-            val.GetWord = rnd.Next(0,7);
-            val.GetCurrentWord = wd.GetCurrentWord[val.GetWord];
-            Debug_Label.Text = val.GetCurrentWord;
-            val.GetWordlength = Debug_Label.Text.Length;
-            val.GetShowTo = new string('*', Debug_Label.Text.Length);
-            Show_Word.Text = val.GetShowTo;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
         }
+        private void Validate_Click(object sender, EventArgs e)
+        {
+            variables.values val = new variables.values();
+            StringBuilder str = new StringBuilder();
+            Stack PreviousWords = new Stack(); // move to a constructor?
+            do
+            {
+                val.GetInput = UserInput.Text.ToLower();
+                if (val.GetCurrentWord[val.GetLetter].ToString() == val.GetInput.ToString())
+                {
+                    str.Append(val.GetInput);
+                }
+                else if (val.GetShowTo[val.GetLetter].ToString() != "*")
+                {
+                    str.Append(val.GetShowTo[val.GetLetter]);
+                }
+                else
+                {
+                    str.Append("*");
+                    val.GetMatcher++;
+                }
+                    val.GetLetter++;
+            } while (val.GetCurrentWord.Length > val.GetLetter);
+            val.GetShowTo = str.ToString();
+            Show_Word.Text = val.GetShowTo;
+            UserInput.Clear(); // might get rid of this when we push input to a stack
+            val.GetLetter = 0;
+            if (!val.GetShowTo.Contains("*"))
+            {
+
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            variables.values val = new variables.values();
+            Whatword wd = new Whatword();
+            Random rnd = new Random();
+            StringBuilder str2 = new StringBuilder();
+            val.GetWord = rnd.Next(0,7); // unnecessary?
+            val.GetCurrentWord = wd.GetCurrentWord[val.GetWord];
+            Debug_Label.Text = val.GetCurrentWord;
+            val.GetWordlength = Debug_Label.Text.Length; //unnecessary?
+            do
+            {
+                str2.Append("*");
+                val.GetLetter++;
+            } while (Debug_Label.Text.Length > val.GetLetter);
+            val.GetLetter = 0;
+            val.GetShowTo = str2.ToString(); // unnecessary?
+            Show_Word.Text = val.GetShowTo;
+        }
     }
+    
+    public class Whatword
+    {
+        private string[] currentword = 
+            {
+            "instantiate",
+            "asymmetric",
+            "dot",
+            "animatronic",
+            "swordfish",
+            "detrimental",
+            "organisation"};
+
+        public string[] GetCurrentWord
+        {
+            get { return currentword; }
+            set { currentword = value; }
+        }
+    }
+    public class Hangmanstage
+    {
+        public Hangmanstage()
+        {
+
+
+
+        } 
+    }
+}
+namespace variables
+{
     public class values
     {
-        private int matches;
-        private int WhatWord;
-        private int wordlength;
-        private int letter;
-        private string input;
+        private static int matches;
+        private static int WhatWord;
+        private static int wordlength;
+        private static int letter;
+        private static string input;
         private static string currentword;
-        private string ShowTo;
+        private static string ShowTo;
         //get set
         public int GetMatcher
         {
             get { return matches; }
-            set { matches = value;}
+            set { matches = value; }
         }
         public int GetWord
         {
@@ -99,33 +149,5 @@ namespace handman_2
             get { return ShowTo; }
             set { ShowTo = value; }
         }
-    }
-    public class Whatword
-    {
-        private string[] currentword = 
-            {
-            "instantiate",
-            "asymmetric",
-            "dot",
-            "animatronic",
-            "swordfish",
-            "detrimental",
-            "organisation"};
-
-        public string[] GetCurrentWord
-        {
-            get { return currentword; }
-            set { currentword = value; }
-        }
-    }
-    public class Hangmanstage
-    {
-        public Hangmanstage()
-        {
-            values val = new values();
-
-
-
-        } 
     }
 }
