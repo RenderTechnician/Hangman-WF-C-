@@ -18,16 +18,19 @@ namespace handman_2
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
-        {
+        { 
         }
         private void Validate_Click(object sender, EventArgs e)
         {
             variables.values val = new variables.values();
             StringBuilder str = new StringBuilder();
-            Stack PreviousWords = new Stack(); // move to a constructor?
             do
             {
                 val.GetInput = UserInput.Text.ToLower();
+                if (val.GetStack != null && val.GetStack.Contains(val.GetInput))
+                {
+                    MessageBox.Show("hello");
+                }
                 if (val.GetCurrentWord[val.GetLetter].ToString() == val.GetInput.ToString())
                 {
                     str.Append(val.GetInput);
@@ -39,20 +42,29 @@ namespace handman_2
                 else
                 {
                     str.Append("*");
-                    val.GetMatcher++;
+                  
                 }
                     val.GetLetter++;
             } while (val.GetCurrentWord.Length > val.GetLetter);
             val.GetShowTo = str.ToString();
             Show_Word.Text = val.GetShowTo;
+            if (!val.GetCurrentWord.Contains(val.GetInput))
+            {
+                val.GetMatcher++;
+                pictureBox1 = Stage(pictureBox1);
+            }
+           // val.GetStack.Push(val.GetInput);
             UserInput.Clear(); // might get rid of this when we push input to a stack
             val.GetLetter = 0;
             if (!val.GetShowTo.Contains("*"))
             {
-
+            //go to win screen
             }
-        }
-
+            if (val.GetMatcher > 9)
+            {
+            //player loses
+            }
+            }
         private void button1_Click(object sender, EventArgs e)
         {
             variables.values val = new variables.values();
@@ -69,10 +81,27 @@ namespace handman_2
                 val.GetLetter++;
             } while (Debug_Label.Text.Length > val.GetLetter);
             val.GetLetter = 0;
+            val.GetMatcher = 0;
+            pictureBox1.Image = Properties.Resources.frame1; //sets back to frame 1
             val.GetShowTo = str2.ToString(); // unnecessary?
             Show_Word.Text = val.GetShowTo;
         }
-    }
+        static PictureBox Stage (PictureBox setframe)
+            {
+            variables.values val = new variables.values();
+            if (val.GetMatcher == 0) // frame1
+            {
+                setframe.Image = Properties.Resources.frame1;
+                setframe.Refresh();
+            }
+            if (val.GetMatcher == 1) // frame1
+            {
+                setframe.Image = Properties.Resources.frame2;
+                setframe.Refresh();
+            }
+            return setframe;
+            }
+}
     
     public class Whatword
     {
@@ -113,6 +142,7 @@ namespace variables
         private static string input;
         private static string currentword;
         private static string ShowTo;
+        private Stack PreviousWords = null;
         //get set
         public int GetMatcher
         {
@@ -149,5 +179,11 @@ namespace variables
             get { return ShowTo; }
             set { ShowTo = value; }
         }
+        public Stack GetStack
+        {
+            get { return PreviousWords; }
+            set { PreviousWords = value; }
+        }
+
     }
 }

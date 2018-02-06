@@ -34,6 +34,7 @@
             this.Debug_Label = new System.Windows.Forms.Label();
             this.Show_Word = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,12 +95,21 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.BackgroundImage = global::handman_2.Properties.Resources.hangman3;
+            this.pictureBox1.BackgroundImage = global::handman_2.Properties.Resources.frame1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(984, 521);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(532, 554);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "label1";
             // 
             // Hangman
             // 
@@ -107,6 +117,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(1008, 702);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Show_Word);
             this.Controls.Add(this.Debug_Label);
             this.Controls.Add(this.UserInput);
@@ -132,6 +143,7 @@
         private System.Windows.Forms.TextBox UserInput;
         private System.Windows.Forms.Label Debug_Label;
         private System.Windows.Forms.Label Show_Word;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
