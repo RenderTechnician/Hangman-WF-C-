@@ -86,7 +86,7 @@ namespace handman_2
             } while (Debug_Label.Text.Length > val.GetLetter);
             val.GetLetter = 0;
             val.GetMatcher = 0;
-            pictureBox1.Image = Properties.Resources.frame11; //sets back to frame 1
+           pictureBox1.Image = Properties.Resources.frame1; //sets back to frame 1
             val.GetShowTo = str2.ToString(); // unnecessary?
             Show_Word.Text = val.GetShowTo;
         }
@@ -95,12 +95,12 @@ namespace handman_2
             variables.values val = new variables.values();
             if (val.GetMatcher == 0) // frame1
             {
-                setframe.Image = Properties.Resources.frame11;
+                setframe.Image = Properties.Resources.frame1;
                 setframe.Refresh();
             }
             if (val.GetMatcher == 1) // frame1
             {
-                setframe.Image = Properties.Resources.frame2;
+              setframe.Image = Properties.Resources.frame2;
                 setframe.Refresh();
             }
             return setframe;

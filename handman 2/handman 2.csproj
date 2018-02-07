@@ -81,6 +81,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="SplashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -98,14 +103,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="SplashScreen.resx">
       <DependentUpon>SplashScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -138,25 +138,18 @@
     <Content Include="Placeholder Images\frame7.png" />
     <Content Include="Placeholder Images\frame8.png" />
     <Content Include="Placeholder Images\frame9.png" />
-    <None Include="Resources\trophyfin.png" />
-    <None Include="Resources\frame1.png" />
-    <None Include="Resources\frame2.png" />
-    <None Include="Resources\frame3.png" />
-    <None Include="Resources\frame4.png" />
-    <None Include="Resources\frame5.png" />
-    <None Include="Resources\frame6.png" />
-    <None Include="Resources\frame7.png" />
-    <None Include="Resources\frame8.png" />
-    <None Include="Resources\frame9.png" />
     <None Include="Resources\frame10.png" />
-    <None Include="Resources\frame11.png" />
-    <Content Include="Resources\new splash.png" />
-    <None Include="Resources\new splash1.png" />
-    <None Include="Resources\splash2.png" />
-    <Content Include="Resources\splashscreen_final.png" />
-    <Content Include="Resources\splashscreen_final2.png" />
-    <None Include="Resources\hangman3.png" />
-    <None Include="Resources\hangman backround.png" />
+    <None Include="Resources\frame9.png" />
+    <None Include="Resources\frame8.png" />
+    <None Include="Resources\frame7.png" />
+    <None Include="Resources\frame6.png" />
+    <None Include="Resources\frame5.png" />
+    <None Include="Resources\frame4.png" />
+    <None Include="Resources\frame3.png" />
+    <None Include="Resources\trophyfin.png" />
+    <None Include="Resources\frame2.png" />
+    <None Include="Resources\frame1.png" />
+    <None Include="Resources\new splash.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">

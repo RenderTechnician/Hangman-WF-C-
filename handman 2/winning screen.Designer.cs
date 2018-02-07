@@ -58,6 +58,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::handman_2.Properties.Resources.trophyfin;
             this.ClientSize = new System.Drawing.Size(784, 561);
+            this.ControlBox = false;
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "winning_screen";

@@ -121,7 +121,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.BackgroundImage = global::handman_2.Properties.Resources.frame11;
+            this.pictureBox1.BackgroundImage = global::handman_2.Properties.Resources.frame1;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(984, 521);
