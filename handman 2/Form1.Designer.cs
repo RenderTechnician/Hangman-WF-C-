@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Hangman));
             this.Validate = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.UserInput = new System.Windows.Forms.TextBox();
@@ -40,30 +41,40 @@
             // 
             // Validate
             // 
-            this.Validate.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.Validate.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Validate.Location = new System.Drawing.Point(12, 618);
+            this.Validate.BackColor = System.Drawing.Color.Transparent;
+            this.Validate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Validate.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Validate.ForeColor = System.Drawing.SystemColors.Window;
+            this.Validate.Location = new System.Drawing.Point(12, 615);
             this.Validate.Name = "Validate";
             this.Validate.Size = new System.Drawing.Size(166, 63);
             this.Validate.TabIndex = 2;
             this.Validate.Text = "Validate";
-            this.Validate.UseVisualStyleBackColor = true;
+            this.Validate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Validate.UseVisualStyleBackColor = false;
             this.Validate.Click += new System.EventHandler(this.Validate_Click);
             // 
             // button1
             // 
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.BackColor = System.Drawing.Color.Transparent;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.SystemColors.Window;
             this.button1.Location = new System.Drawing.Point(12, 554);
+            this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(209, 58);
             this.button1.TabIndex = 3;
             this.button1.Text = "New Game";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // UserInput
             // 
+            this.UserInput.BackColor = System.Drawing.SystemColors.Menu;
+            this.UserInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UserInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UserInput.Location = new System.Drawing.Point(916, 539);
             this.UserInput.MaxLength = 1;
@@ -80,26 +91,32 @@
             this.Debug_Label.Size = new System.Drawing.Size(71, 13);
             this.Debug_Label.TabIndex = 5;
             this.Debug_Label.Text = "Debug_Label";
+            this.Debug_Label.Visible = false;
             // 
             // Show_Word
             // 
             this.Show_Word.AutoSize = true;
-            this.Show_Word.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.Show_Word.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Show_Word.Location = new System.Drawing.Point(358, 557);
+            this.Show_Word.BackColor = System.Drawing.Color.Transparent;
+            this.Show_Word.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Show_Word.ForeColor = System.Drawing.SystemColors.Window;
+            this.Show_Word.Location = new System.Drawing.Point(385, 567);
             this.Show_Word.Name = "Show_Word";
-            this.Show_Word.Size = new System.Drawing.Size(0, 55);
+            this.Show_Word.Size = new System.Drawing.Size(0, 58);
             this.Show_Word.TabIndex = 6;
             this.Show_Word.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(532, 554);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.Window;
+            this.label1.Location = new System.Drawing.Point(420, 646);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(115, 32);
             this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
+            this.label1.Text = "This is a hint";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -116,6 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1008, 702);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Show_Word);

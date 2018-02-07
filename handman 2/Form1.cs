@@ -18,7 +18,9 @@ namespace handman_2
             InitializeComponent();
         }
         private void Form1_Load(object sender, EventArgs e)
-        { 
+        {
+            button1.FlatAppearance.BorderSize = 0;
+            Validate.FlatAppearance.BorderSize = 0;
         }
         private void Validate_Click(object sender, EventArgs e)
         {
@@ -103,8 +105,8 @@ namespace handman_2
             }
             return setframe;
             }
-}
-    
+    }
+
     public class Whatword
     {
         private string[] currentword = 
