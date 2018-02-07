@@ -58,6 +58,8 @@ namespace handman_2
             val.GetLetter = 0;
             if (!val.GetShowTo.Contains("*"))
             {
+                winning_screen w = new winning_screen();
+                w.Show();
             //go to win screen
             }
             if (val.GetMatcher > 9)
@@ -65,7 +67,7 @@ namespace handman_2
             //player loses
             }
             }
-        private void button1_Click(object sender, EventArgs e)
+        public void button1_Click(object sender, EventArgs e)
         {
             variables.values val = new variables.values();
             Whatword wd = new Whatword();
@@ -82,7 +84,7 @@ namespace handman_2
             } while (Debug_Label.Text.Length > val.GetLetter);
             val.GetLetter = 0;
             val.GetMatcher = 0;
-            pictureBox1.Image = Properties.Resources.frame1; //sets back to frame 1
+            pictureBox1.Image = Properties.Resources.frame11; //sets back to frame 1
             val.GetShowTo = str2.ToString(); // unnecessary?
             Show_Word.Text = val.GetShowTo;
         }
@@ -91,7 +93,7 @@ namespace handman_2
             variables.values val = new variables.values();
             if (val.GetMatcher == 0) // frame1
             {
-                setframe.Image = Properties.Resources.frame1;
+                setframe.Image = Properties.Resources.frame11;
                 setframe.Refresh();
             }
             if (val.GetMatcher == 1) // frame1
@@ -120,15 +122,6 @@ namespace handman_2
             get { return currentword; }
             set { currentword = value; }
         }
-    }
-    public class Hangmanstage
-    {
-        public Hangmanstage()
-        {
-
-
-
-        } 
     }
 }
 namespace variables

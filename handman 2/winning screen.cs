@@ -14,7 +14,22 @@ namespace handman_2
     {
         public winning_screen()
         {
+            Hangman h = new Hangman();
             InitializeComponent();
+            h.Enabled = false;
+        }
+
+        public void button1_Click(object sender, EventArgs e)
+        {
+            Hangman h = new Hangman();
+            h.Enabled = true;
+            h.button1.PerformClick();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

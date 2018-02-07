@@ -42,7 +42,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::handman_2.Properties.Resources.new_splash;
+            this.BackgroundImage = global::handman_2.Properties.Resources.splash2;
             this.ClientSize = new System.Drawing.Size(1350, 729);
             this.ControlBox = false;
             this.Name = "SplashScreen";

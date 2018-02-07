@@ -33,8 +33,8 @@
             this.UserInput = new System.Windows.Forms.TextBox();
             this.Debug_Label = new System.Windows.Forms.Label();
             this.Show_Word = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,16 +92,6 @@
             this.Show_Word.TabIndex = 6;
             this.Show_Word.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.pictureBox1.BackgroundImage = global::handman_2.Properties.Resources.frame1;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(984, 521);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -110,6 +100,16 @@
             this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 7;
             this.label1.Text = "label1";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.pictureBox1.BackgroundImage = global::handman_2.Properties.Resources.frame11;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(984, 521);
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // Hangman
             // 
@@ -127,7 +127,6 @@
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Hangman";
-            this.Opacity = 0.98D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hangman";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -139,12 +138,12 @@
 
         #endregion
         private System.Windows.Forms.Button Validate;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox UserInput;
         private System.Windows.Forms.Label Debug_Label;
         private System.Windows.Forms.Label Show_Word;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        public System.Windows.Forms.Button button1;
     }
 }
 

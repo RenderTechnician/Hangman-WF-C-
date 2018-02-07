@@ -83,6 +83,16 @@ namespace handman_2.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap frame11 {
+            get {
+                object obj = ResourceManager.GetObject("frame11", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap frame2 {
             get {
                 object obj = ResourceManager.GetObject("frame2", resourceCulture);
@@ -186,6 +196,26 @@ namespace handman_2.Properties {
         internal static System.Drawing.Bitmap new_splash {
             get {
                 object obj = ResourceManager.GetObject("new splash", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap splash2 {
+            get {
+                object obj = ResourceManager.GetObject("splash2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap trophyfin {
+            get {
+                object obj = ResourceManager.GetObject("trophyfin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

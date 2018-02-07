@@ -138,6 +138,7 @@
     <Content Include="Placeholder Images\frame7.png" />
     <Content Include="Placeholder Images\frame8.png" />
     <Content Include="Placeholder Images\frame9.png" />
+    <None Include="Resources\trophyfin.png" />
     <None Include="Resources\frame1.png" />
     <None Include="Resources\frame2.png" />
     <None Include="Resources\frame3.png" />
@@ -148,8 +149,10 @@
     <None Include="Resources\frame8.png" />
     <None Include="Resources\frame9.png" />
     <None Include="Resources\frame10.png" />
+    <None Include="Resources\frame11.png" />
     <Content Include="Resources\new splash.png" />
     <None Include="Resources\new splash1.png" />
+    <None Include="Resources\splash2.png" />
     <Content Include="Resources\splashscreen_final.png" />
     <Content Include="Resources\splashscreen_final2.png" />
     <None Include="Resources\hangman3.png" />
