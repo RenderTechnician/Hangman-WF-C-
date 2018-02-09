@@ -128,6 +128,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="hangman backround.png" />
+    <Content Include="Hints.txt" />
     <Content Include="Placeholder Images\frame1.png" />
     <Content Include="Placeholder Images\frame10.png" />
     <Content Include="Placeholder Images\frame2.png" />
@@ -138,7 +139,7 @@
     <Content Include="Placeholder Images\frame7.png" />
     <Content Include="Placeholder Images\frame8.png" />
     <Content Include="Placeholder Images\frame9.png" />
-    <Content Include="TextFile1.txt" />
+    <Content Include="Words.txt" />
     <None Include="Resources\frame10.png" />
     <None Include="Resources\frame9.png" />
     <None Include="Resources\frame8.png" />

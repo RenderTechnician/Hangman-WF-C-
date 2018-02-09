@@ -77,6 +77,7 @@ namespace handman_2
             Random rnd = new Random();
             StringBuilder str2 = new StringBuilder();
             val.GetWord = rnd.Next(0, wd.GetCurrentWord.Length); // unnecessary?
+            HintBox.Text = wd.GetCurrentHint[val.GetWord];
             val.GetCurrentWord = wd.GetCurrentWord[val.GetWord];
             Debug_Label.Text = val.GetCurrentWord;
             val.GetWordlength = Debug_Label.Text.Length; //unnecessary?
@@ -110,21 +111,20 @@ namespace handman_2
 
     public class Whatword
     {
-        private string[] currentword = 
-            {
-            "instantiate",
-            "asymmetric",
-            "dot",
-            "animatronic",
-            "swordfish",
-            "detrimental",
-            "organisation"};
+        private string[] currentword = System.IO.File.ReadAllLines(@"C:\Users\willr\source\repos\handman 2\handman 2\Words.txt");
+        private string[] currenthint = System.IO.File.ReadAllLines(@"C:\Users\willr\source\repos\handman 2\handman 2\Hints.txt");
 
         public string[] GetCurrentWord
         {
             get { return currentword; }
             set { currentword = value; }
         }
+        public string[] GetCurrentHint
+        {
+            get { return currenthint; }
+            set { currenthint = value; }
+        }
+
     }
 }
 namespace variables

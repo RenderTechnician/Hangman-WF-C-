@@ -34,7 +34,7 @@
             this.UserInput = new System.Windows.Forms.TextBox();
             this.Debug_Label = new System.Windows.Forms.Label();
             this.Show_Word = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.HintBox = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -105,18 +105,21 @@
             this.Show_Word.TabIndex = 6;
             this.Show_Word.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
+            // HintBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.Window;
-            this.label1.Location = new System.Drawing.Point(420, 646);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 32);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "This is a hint";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.HintBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.HintBox.AutoSize = true;
+            this.HintBox.BackColor = System.Drawing.Color.Transparent;
+            this.HintBox.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HintBox.ForeColor = System.Drawing.SystemColors.Window;
+            this.HintBox.Location = new System.Drawing.Point(12, 682);
+            this.HintBox.Name = "HintBox";
+            this.HintBox.Size = new System.Drawing.Size(115, 32);
+            this.HintBox.TabIndex = 7;
+            this.HintBox.Text = "This is a hint";
+            this.HintBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pictureBox1
             // 
@@ -134,8 +137,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1008, 702);
-            this.Controls.Add(this.label1);
+            this.ClientSize = new System.Drawing.Size(1008, 723);
+            this.Controls.Add(this.HintBox);
             this.Controls.Add(this.Show_Word);
             this.Controls.Add(this.Debug_Label);
             this.Controls.Add(this.UserInput);
@@ -159,7 +162,7 @@
         private System.Windows.Forms.TextBox UserInput;
         private System.Windows.Forms.Label Debug_Label;
         private System.Windows.Forms.Label Show_Word;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label HintBox;
         private System.Windows.Forms.PictureBox pictureBox1;
         public System.Windows.Forms.Button button1;
     }
