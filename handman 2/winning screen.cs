@@ -21,6 +21,7 @@ namespace handman_2
 
         public void button1_Click(object sender, EventArgs e)
         {
+
             Hangman h = new Hangman();
             h.Enabled = true;
             h.button1.PerformClick();

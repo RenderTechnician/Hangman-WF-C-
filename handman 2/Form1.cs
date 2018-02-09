@@ -61,7 +61,7 @@ namespace handman_2
             if (!val.GetShowTo.Contains("*"))
             {
                 winning_screen w = new winning_screen();
-                w.Show();
+                w.ShowDialog();
             //go to win screen
             }
             if (val.GetMatcher > 9)
