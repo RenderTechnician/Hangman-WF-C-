@@ -55,7 +55,6 @@ namespace handman_2
                 val.GetMatcher++;
                 pictureBox1 = Stage(pictureBox1);
             }
-           // val.GetStack.Push(val.GetInput);
             UserInput.Clear(); // might get rid of this when we push input to a stack
             val.GetLetter = 0;
             if (!val.GetShowTo.Contains("*"))
@@ -65,9 +64,11 @@ namespace handman_2
                 button1.PerformClick();
             //go to win screen
             }
-            if (val.GetMatcher > 9)
+            if (val.GetMatcher > 8)
             {
-            //player loses
+                Lose_Screen lose = new Lose_Screen();
+                lose.ShowDialog();
+                button1.PerformClick();
             }
             }
         public void button1_Click(object sender, EventArgs e)
@@ -79,13 +80,12 @@ namespace handman_2
             val.GetWord = rnd.Next(0, wd.GetCurrentWord.Length); // unnecessary?
             HintBox.Text = wd.GetCurrentHint[val.GetWord];
             val.GetCurrentWord = wd.GetCurrentWord[val.GetWord];
-            Debug_Label.Text = val.GetCurrentWord;
-            val.GetWordlength = Debug_Label.Text.Length; //unnecessary?
+            val.GetWordlength = val.GetCurrentWord.Length; //unnecessary?
             do
             {
                 str2.Append("*");
                 val.GetLetter++;
-            } while (Debug_Label.Text.Length > val.GetLetter);
+            } while (val.GetCurrentWord.Length > val.GetLetter);
             val.GetLetter = 0;
             val.GetMatcher = 0;
            pictureBox1.Image = Properties.Resources.frame1; //sets back to frame 1
@@ -95,14 +95,64 @@ namespace handman_2
         static PictureBox Stage (PictureBox setframe)
             {
             variables.values val = new variables.values();
-            if (val.GetMatcher == 0) // frame1
+            //Frame1
+            if (val.GetMatcher == 0)
             {
                 setframe.Image = Properties.Resources.frame1;
                 setframe.Refresh();
             }
-            if (val.GetMatcher == 1) // frame1
+            //Frame2
+            if (val.GetMatcher == 1)
             {
               setframe.Image = Properties.Resources.frame2;
+                setframe.Refresh();
+            }
+            //Frame3
+            if (val.GetMatcher == 2)
+            {
+                setframe.Image = Properties.Resources.frame3;
+                setframe.Refresh();
+            }
+            //Frame4
+            if (val.GetMatcher == 3)
+            {
+                setframe.Image = Properties.Resources.frame4;
+                setframe.Refresh();
+            }
+            //Frame5
+            if (val.GetMatcher == 4)
+            {
+                setframe.Image = Properties.Resources.frame5;
+                setframe.Refresh();
+            }
+            //Frame6
+            if (val.GetMatcher == 5)
+            {
+                setframe.Image = Properties.Resources.frame6;
+                setframe.Refresh();
+            }
+            //Frame7
+            if (val.GetMatcher == 6)
+            {
+                setframe.Image = Properties.Resources.frame7;
+                setframe.Refresh();
+            }
+            //Frame8
+            if (val.GetMatcher == 7)
+            {
+                setframe.Image = Properties.Resources.frame8;
+                setframe.Refresh();
+            }
+            //Frame9
+            if (val.GetMatcher == 8)
+            {
+                setframe.Image = Properties.Resources.frame9;
+                setframe.Refresh();
+            }
+            //Frame10
+            if (val.GetMatcher == 9)
+            {
+                setframe.Image = Properties.Resources.frame10;
                 setframe.Refresh();
             }
             return setframe;

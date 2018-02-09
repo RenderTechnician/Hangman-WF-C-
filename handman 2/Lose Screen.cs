@@ -10,15 +10,15 @@ using System.Windows.Forms;
 
 namespace handman_2
 {
-    public partial class winning_screen : Form
+    public partial class Lose_Screen : Form
     {
-        public winning_screen()
+        public Lose_Screen()
         {
             InitializeComponent();
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
         }
 
-        public void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Hide();
         }
