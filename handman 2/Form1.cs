@@ -62,6 +62,7 @@ namespace handman_2
             {
                 winning_screen w = new winning_screen();
                 w.ShowDialog();
+                button1.PerformClick();
             //go to win screen
             }
             if (val.GetMatcher > 9)
@@ -75,7 +76,7 @@ namespace handman_2
             Whatword wd = new Whatword();
             Random rnd = new Random();
             StringBuilder str2 = new StringBuilder();
-            val.GetWord = rnd.Next(0,7); // unnecessary?
+            val.GetWord = rnd.Next(0, wd.GetCurrentWord.Length); // unnecessary?
             val.GetCurrentWord = wd.GetCurrentWord[val.GetWord];
             Debug_Label.Text = val.GetCurrentWord;
             val.GetWordlength = Debug_Label.Text.Length; //unnecessary?

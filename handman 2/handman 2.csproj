@@ -138,6 +138,7 @@
     <Content Include="Placeholder Images\frame7.png" />
     <Content Include="Placeholder Images\frame8.png" />
     <Content Include="Placeholder Images\frame9.png" />
+    <Content Include="TextFile1.txt" />
     <None Include="Resources\frame10.png" />
     <None Include="Resources\frame9.png" />
     <None Include="Resources\frame8.png" />
