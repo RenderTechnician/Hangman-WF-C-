@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 namespace handman_2
 {
-
     public partial class Hangman : Form
     {
         public Hangman()
@@ -29,10 +28,6 @@ namespace handman_2
             do
             {
                 val.GetInput = UserInput.Text.ToLower();
-                if (val.GetStack != null && val.GetStack.Contains(val.GetInput))
-                {
-                    MessageBox.Show("hello");
-                }
                 if (val.GetCurrentWord[val.GetLetter].ToString() == val.GetInput.ToString())
                 {
                     str.Append(val.GetInput);
@@ -43,11 +38,18 @@ namespace handman_2
                 }
                 else
                 {
-                    str.Append("*");
-                  
+                    str.Append("*"); 
                 }
                     val.GetLetter++;
             } while (val.GetCurrentWord.Length > val.GetLetter);
+            if (val.GetInput == "" || val.GetInput == " ")
+            {
+                MessageBox.Show("Please enter a valid value");
+                if(val.GetMatcher > 0)
+                {
+                    val.GetMatcher--;
+                }
+            }
             val.GetShowTo = str.ToString();
             Show_Word.Text = val.GetShowTo;
             if (!val.GetCurrentWord.Contains(val.GetInput))
@@ -55,16 +57,15 @@ namespace handman_2
                 val.GetMatcher++;
                 pictureBox1 = Stage(pictureBox1);
             }
-            UserInput.Clear(); // might get rid of this when we push input to a stack
+            UserInput.Clear();
             val.GetLetter = 0;
-            if (!val.GetShowTo.Contains("*"))
+            if (!val.GetShowTo.Contains("*")) // Opens Win Screen and re-sets main scene
             {
                 winning_screen w = new winning_screen();
                 w.ShowDialog();
                 button1.PerformClick();
-            //go to win screen
             }
-            if (val.GetMatcher > 8)
+            if (val.GetMatcher > 8) // Opens Lose Screen and re-sets main scene
             {
                 Lose_Screen lose = new Lose_Screen();
                 lose.ShowDialog();
@@ -77,10 +78,9 @@ namespace handman_2
             Whatword wd = new Whatword();
             Random rnd = new Random();
             StringBuilder str2 = new StringBuilder();
-            val.GetWord = rnd.Next(0, wd.GetCurrentWord.Length); // unnecessary?
+            val.GetWord = rnd.Next(0, wd.GetCurrentWord.Length);
             HintBox.Text = wd.GetCurrentHint[val.GetWord];
             val.GetCurrentWord = wd.GetCurrentWord[val.GetWord];
-            val.GetWordlength = val.GetCurrentWord.Length; //unnecessary?
             do
             {
                 str2.Append("*");
@@ -88,8 +88,8 @@ namespace handman_2
             } while (val.GetCurrentWord.Length > val.GetLetter);
             val.GetLetter = 0;
             val.GetMatcher = 0;
-           pictureBox1.Image = Properties.Resources.frame1; //sets back to frame 1
-            val.GetShowTo = str2.ToString(); // unnecessary?
+           pictureBox1.Image = Properties.Resources.frame1; //Sets PictureBox back to Frame 1
+            val.GetShowTo = str2.ToString();
             Show_Word.Text = val.GetShowTo;
         }
         static PictureBox Stage (PictureBox setframe)
@@ -158,7 +158,6 @@ namespace handman_2
             return setframe;
             }
     }
-
     public class Whatword
     {
         private string[] currentword = System.IO.File.ReadAllLines(@"C:\Users\willr\source\repos\handman 2\handman 2\Words.txt");
@@ -174,22 +173,20 @@ namespace handman_2
             get { return currenthint; }
             set { currenthint = value; }
         }
-
     }
 }
 namespace variables
 {
     public class values
     {
-        private static int matches;
-        private static int WhatWord;
-        private static int wordlength;
-        private static int letter;
-        private static string input;
-        private static string currentword;
-        private static string ShowTo;
-        private Stack PreviousWords = null;
-        //get set
+        private static int matches;               // Determines How many words in the phrase have been correctly guessed.
+        private static int WhatWord;             //  Determines which word has been selected by the program. [Int]
+        private static int letter;              //   What letter is currently selected, also controls most 'do,while' loops.
+        private static string input;           //    The parsed text from the input box, this is the guess from the user
+        private static string currentword;    //     Determines which word has been selected by the program. [String]
+        private static string ShowTo;        //      Determines the string that is presented to the user.
+
+        // All get Set methods, these allow these above variables to passed through objects.
         public int GetMatcher
         {
             get { return matches; }
@@ -199,11 +196,6 @@ namespace variables
         {
             get { return WhatWord; }
             set { WhatWord = value; }
-        }
-        public int GetWordlength
-        {
-            get { return wordlength; }
-            set { wordlength = value; }
         }
         public int GetLetter
         {
@@ -225,11 +217,5 @@ namespace variables
             get { return ShowTo; }
             set { ShowTo = value; }
         }
-        public Stack GetStack
-        {
-            get { return PreviousWords; }
-            set { PreviousWords = value; }
-        }
-
     }
 }
