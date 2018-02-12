@@ -161,12 +161,45 @@ namespace handman_2.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to To provide an instance of or concrete evidence in support of a theory, concept, claim, or the like. 
+        ///Not identical on both sides of a central line.
+        ///A domesticated canid, Canis familiaris, bred in many varieties. 
+        ///The technology connected with the use of electronics to animate puppets or other figures, as for motion pictures. 
+        ///A large, marine food fish, Xiphias gladius, having the upper jaw elongated into a swordlike structure. 
+        ///Causing detriment, as loss or injury; damaging; harmful. 
+        ///A group of perso [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string Hints {
+            get {
+                return ResourceManager.GetString("Hints", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap trophyfin {
             get {
                 object obj = ResourceManager.GetObject("trophyfin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to instantiate
+        ///asymmetric
+        ///dog
+        ///animatronic
+        ///swordfish
+        ///detrimental
+        ///organisation
+        ///strange
+        ///hentai
+        ///.
+        /// </summary>
+        internal static string Words {
+            get {
+                return ResourceManager.GetString("Words", resourceCulture);
             }
         }
     }

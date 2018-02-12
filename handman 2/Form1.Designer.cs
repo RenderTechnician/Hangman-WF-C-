@@ -43,14 +43,13 @@
             // 
             this.Validate.BackColor = System.Drawing.Color.Transparent;
             this.Validate.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Validate.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Validate.Font = new System.Drawing.Font("Agency FB", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Validate.ForeColor = System.Drawing.SystemColors.Window;
-            this.Validate.Location = new System.Drawing.Point(12, 615);
+            this.Validate.Location = new System.Drawing.Point(894, 661);
             this.Validate.Name = "Validate";
-            this.Validate.Size = new System.Drawing.Size(166, 63);
+            this.Validate.Size = new System.Drawing.Size(112, 40);
             this.Validate.TabIndex = 2;
             this.Validate.Text = "Validate";
-            this.Validate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.Validate.UseVisualStyleBackColor = false;
             this.Validate.Click += new System.EventHandler(this.Validate_Click);
             // 
@@ -76,7 +75,7 @@
             this.UserInput.BackColor = System.Drawing.SystemColors.Menu;
             this.UserInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.UserInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 72F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UserInput.Location = new System.Drawing.Point(916, 539);
+            this.UserInput.Location = new System.Drawing.Point(907, 539);
             this.UserInput.MaxLength = 1;
             this.UserInput.Name = "UserInput";
             this.UserInput.Size = new System.Drawing.Size(80, 116);
@@ -86,7 +85,7 @@
             // Debug_Label
             // 
             this.Debug_Label.AutoSize = true;
-            this.Debug_Label.Location = new System.Drawing.Point(925, 668);
+            this.Debug_Label.Location = new System.Drawing.Point(677, 536);
             this.Debug_Label.Name = "Debug_Label";
             this.Debug_Label.Size = new System.Drawing.Size(71, 13);
             this.Debug_Label.TabIndex = 5;
@@ -133,8 +132,8 @@
             // 
             // Hangman
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1008, 723);
@@ -147,6 +146,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Hangman";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

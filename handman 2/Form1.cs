@@ -160,8 +160,9 @@ namespace handman_2
     }
     public class Whatword
     {
-        private string[] currentword = System.IO.File.ReadAllLines(@"C:\Users\willr\source\repos\handman 2\handman 2\Words.txt");
-        private string[] currenthint = System.IO.File.ReadAllLines(@"C:\Users\willr\source\repos\handman 2\handman 2\Hints.txt");
+       // string dir = AppDomain.CurrentDomain.BaseDirectory + "Words.txt";
+        private string[] currentword = System.IO.File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Words.txt");
+        private string[] currenthint = System.IO.File.ReadAllLines(AppDomain.CurrentDomain.BaseDirectory + "Hints.txt");
 
         public string[] GetCurrentWord
         {
