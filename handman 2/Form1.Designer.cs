@@ -60,7 +60,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Agency FB", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.SystemColors.Window;
-            this.button1.Location = new System.Drawing.Point(12, 554);
+            this.button1.Location = new System.Drawing.Point(12, 539);
             this.button1.Margin = new System.Windows.Forms.Padding(0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(209, 58);
@@ -113,7 +113,7 @@
             this.HintBox.BackColor = System.Drawing.Color.Transparent;
             this.HintBox.Font = new System.Drawing.Font("Agency FB", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HintBox.ForeColor = System.Drawing.SystemColors.Window;
-            this.HintBox.Location = new System.Drawing.Point(12, 682);
+            this.HintBox.Location = new System.Drawing.Point(12, 720);
             this.HintBox.Name = "HintBox";
             this.HintBox.Size = new System.Drawing.Size(115, 32);
             this.HintBox.TabIndex = 7;
@@ -136,7 +136,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.ClientSize = new System.Drawing.Size(1008, 723);
+            this.ClientSize = new System.Drawing.Size(1008, 761);
             this.Controls.Add(this.HintBox);
             this.Controls.Add(this.Show_Word);
             this.Controls.Add(this.Debug_Label);
