@@ -19,7 +19,3 @@ pathognomy
 moonwalk
 slash
 noticer
-test
-test
-test
-test
